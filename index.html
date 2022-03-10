@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Link for Favicon -->
+     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+     <!-- Link for css stylesheet -->
+     <link href="style.css" rel="stylesheet"/>
+
+     <title>Frontend Mentor | Manage landing page</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="container">
+        <a href="/" class="logo">
+            <img src="images/logo.svg" alt="logo">
+        </a>
+       
+        <img src="images/icon-hamburger.svg" class="icon" id="menu" alt="icon-hamburger">
+        <img src="images/icon-close.svg" class="hidden icon" id="close" alt="icon-close">
+        
+        <nav class="hidden" id="nav-menu">
+            <a class="nav-link">Pricing</a>
+            <a class="nav-link">Product</a>
+            <a href="#about-us" class="nav-link">About Us</a>
+            <a class="nav-link">Careers</a>
+            <a class="nav-link">Community</a>
+        </nav>  
+        
+    </header>
+
+    <div class="backdrop hidden"></div>
+    <!-- Hero Image -->
+    <img class="first-image" src="images/bg-tablet-pattern.svg" alt="bg-tablet-pattern">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container container">
+            <div>
+                <img class="illustration-intro" alt="hero" src="images/illustration-intro.svg">
+            </div>
+
+            <div class="hero-text">
+                <h1 class="hero-header-text"> Bring everyone together to build better products.
+                </h1>
+
+                <p class="hero-header-para">
+                    Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.
+                </p>
+                
+                <button class="btn orange">Get Started</button>
+                
+                <img class="second-image" src="images/bg-tablet-pattern.svg" alt="bg-tablet-pattern">
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about-us" id="about-us">
+        <div class="about-us-header container">
+            <h2>What's different about Manage?</h2>
+            <p> Manage provides all the functionality your team needs, without 
+                the complexity. Our software is tailor-made for modern digital 
+                product teams.
+            </p>
+        </div>
+
+
+        <div class="mission">
+            <div class="mission-header">
+                <span>01</span>
+                <h4>Track company-wide progress
+                </h4>
+            </div>
+            <p class="mission-statement">
+                See how your day-to-day tasks fit into the wider vision. Go from 
+                tracking progress at the milestone level all the way done to the 
+                smallest of details. Never lose sight of the bigger picture again.
+              
+              </p>
+        </div>
+
+
+        <div class="mission">
+            <div class="mission-header">
+                <span>02</span>
+                <h4>Advanced built-in reports
+                </h4>
+            </div>
+            <p class="mission-statement">
+                Set internal delivery estimates and track progress toward company 
+                goals. Our customisable dashboard helps you build out the reports 
+                you need to keep key stakeholders informed.
+              </p>
+        </div>
+
+
+        <div class="mission">
+            <div class="mission-header">
+                <span>03</span>
+                <h4>Everything you need in one place
+                </h4>
+            </div>
+            <p class="mission-statement">
+                Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.              
+            </p>
+        </div>
+        
+    </section>
+
+    <!-- Get Started -->
+    <section class="get-started">
+        <h1>Simplify how your team works today.</h1>
+        <button class="btn">Get Started</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

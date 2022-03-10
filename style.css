@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
+
+:root{
+    --grayishBlue: hsl(227, 12%, 61%);
+    --darkBlue: hsl(233, 12%, 13%);
+    --paleRed: hsl(13, 100%, 96%);
+    --lightGray: hsl(0, 0%, 98%);
+    --brightRed: hsl(12, 88%, 59%);
+    --blue: hsl(228, 39%, 23%);
+}
+
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 18px;
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+
+}
+
+.backdrop{
+    position: absolute;
+    top:0;
+    background-image:linear-gradient(
+        white,black);
+    opacity: 0.5;
+    z-index: 2;
+    width:100%;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p{
+    line-height: 1.625;
+    color: var(--grayishBlue);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 0;
+    flex-wrap: wrap;
+    z-index: 3;
+    position: relative;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 35px 0;
+    border-radius: 8px;
+    z-index: 5;
+    gap: 5px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    left: 0;
+    animation: pop-in 0.1s;
+}
+
+nav a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 0;
+    transition: 0.2s;
+}
+
+nav a:hover{
+    color: var(--grayishBlue);
+}
+
+.hidden{
+    display: none;
+}
+
+.icon{
+    cursor: pointer;
+}
+
+.hero-section{
+    z-index: 1;
+    margin-bottom: 90px;
+    width: 100%;
+    height: 100%;
+} 
+
+.hero-section img{
+    width: 100%;
+}
+
+.first-image,.second-image{
+    position: absolute;
+    z-index: -1;
+}
+
+.first-image{
+    width: 100%;
+    top: -40px;
+    right:-72px;
+}
+
+.hero-container{
+  
+}
+
+.hero-text{
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.hero-header-text{
+    font-size: 2.2rem;
+    color: var(--blue);
+}
+
+.hero-header-para{
+    padding: 10px 10px 25px;
+}
+
+.btn{ 
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight:700;
+}
+
+.orange{
+    color: white;
+    background-color: var(--brightRed);
+    box-shadow: 0 10px 15px -8px var(--brightRed), 0 4px 6px -4px var(--brightRed);
+}
+
+.orange:hover{
+   opacity: 0.6;
+}
+
+.second-image{
+    top:4.6rem;
+    right: -13.2rem;
+}
+
+.about-us{
+   padding-top:30px;
+    height:100%;
+}
+
+.about-us-header{
+    text-align: center;
+}
+
+.about-us-header h2{
+    font-size: 1.8rem;
+    color:var(--blue);
+}
+
+.about-us-header p{
+    font-size: 0.9rem;
+    margin: 25px 0;
+}
+
+.mission{
+    margin-top: 25px;
+}
+
+.mission-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--paleRed);
+    border-radius: 20px 0 0 20px;
+}
+
+.mission-header span{
+    color: white;
+    background-color: var(--brightRed);
+    padding: 7px 25px;
+    border-radius: 20px;
+}
+
+.mission-header h4{
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.mission-statement{
+    text-align: left;
+    color: var(--grayishBlue);
+    font-size: 0.9rem;
+    padding: 15px 20px 15px 4px;
+}
+
+.get-started{
+    background: url("images/bg-simplify-section-mobile.svg") no-repeat center left;
+    background-color: var(--brightRed);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 30px;
+}
+
+.get-started h1{
+    text-align: center;
+    color:white;
+    font-size: 2.3rem;
+}
+
+.get-started button{
+    margin: 30px 0;
+    background-color: white;
+    color:var(--brightRed);
+}
+
+.get-started button:hover{
+    color: var(--paleRed);
+}
+
+
+@keyframes pop-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
