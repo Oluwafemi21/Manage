@@ -65,7 +65,7 @@ button{
 }
 
 .email-box input[type="text"]:focus{
-    outline:2px solid var(--brightRed);
+    outline:none;
 }
 
 .email-box input[type="submit"]:focus{
@@ -365,10 +365,9 @@ footer{
 }
 
 .email-box input[type="text"]{
-    padding: 0 20px;
+    padding: 0 10px 0 20px;
     border: none;
     border-radius: 30px;
-    color: var(--brightRed);
     font-weight: 700;
     width: 100%;
 }
@@ -386,7 +385,11 @@ footer{
 }
 
 .error{
-    padding: 10px 0 30px;
+    padding: 10px 20px 30px;
+    color: var(--brightRed);
+    font-style: italic;
+    font-size: 0.9rem;
+    transition: 0.3s;
 }
 
 .middle{
@@ -437,6 +440,21 @@ footer{
     font-size: 14px;
     color: var(--grayishBlue);
 }
+
+.attribution{
+    background-color:var(--brightRed);
+    padding:20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color:white;
+    font-weight: 700;
+}
+
+.attribution a{
+    text-decoration: underline;
+    color: var(--blue);
+}
+
 
 @keyframes pop-in{
     from{

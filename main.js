@@ -6,6 +6,9 @@ const body = document.querySelector('body');
 const links = document.querySelectorAll('.nav-link');
 const control = document.querySelectorAll('.control span');
 const cards = document.querySelectorAll('.card');
+const form = document.querySelector('form');
+const error = document.querySelector('.error');
+
 
 menu.addEventListener('click',() => {
     close.classList.remove('hidden');
@@ -42,3 +45,23 @@ control.forEach((controlBtn,index) =>{
         cards[index].classList.add("active");
     });
 });
+
+
+// Email Validation
+const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+form.email.addEventListener('keyup',(e)=>{
+    if(pattern.test(e.target.value)){
+        error.classList.add('hidden');
+        form.email.style.color = "var(--blue)";
+        form.email.style.outline = "none";
+        console.log(true);
+    } else if (e.target.value === ""){
+        form.email.style.outline = "none"
+        error.classList.add('hidden');
+    } else {
+        form.email.style.outline = "1px solid var(--brightRed)";
+        error.classList.remove('hidden');
+        form.email.style.color = "var(--brightRed)";
+    }
+})
