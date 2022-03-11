@@ -14,6 +14,7 @@
     padding:0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 html{
@@ -21,12 +22,10 @@ html{
 }
 
 body{
-    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 18px;
     width: 100vw;
-    position: relative;
+    position:relative;
     overflow-x: hidden;
-
 }
 
 .backdrop{
@@ -52,10 +51,29 @@ p{
     font-size: 1rem;
 }
 
+ul li{
+    list-style-type: none;
+    padding: 10px 0;
+}
+
 button{
     border: none;
+    background-color: transparent;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s;
+    outline: none;
+}
+
+.email-box input[type="text"]:focus{
+    outline:2px solid var(--brightRed);
+}
+
+.email-box input[type="submit"]:focus{
+    outline: 2px solid white;
+}
+
+.orange:focus,.get-started button:focus{
+    outline: 2px solid var(--darkBlue);
 }
 
 .container{
@@ -119,10 +137,10 @@ nav a:hover{
     cursor: pointer;
 }
 
-.hero-section{
+.hero-section{ 
     z-index: 1;
-    margin-bottom: 90px;
-    width: 100%;
+    width: 100%;   
+    padding-bottom: 20px;
     height: 100%;
 } 
 
@@ -135,14 +153,18 @@ nav a:hover{
     z-index: -1;
 }
 
+
 .first-image{
-    width: 100%;
-    top: -40px;
+    top:-40px;
     right:-72px;
 }
 
+.second-image{
+    top:4.6rem;
+    right: -13.2rem;
+}
+
 .hero-container{
-  
 }
 
 .hero-text{
@@ -176,13 +198,10 @@ nav a:hover{
    opacity: 0.6;
 }
 
-.second-image{
-    top:4.6rem;
-    right: -13.2rem;
-}
+/* About Us section */
 
 .about-us{
-   padding-top:30px;
+   padding:30px 0;
     height:100%;
 }
 
@@ -191,6 +210,7 @@ nav a:hover{
 }
 
 .about-us-header h2{
+    padding: 0  20px;
     font-size: 1.8rem;
     color:var(--blue);
 }
@@ -232,6 +252,71 @@ nav a:hover{
     padding: 15px 20px 15px 4px;
 }
 
+/* Reviews */
+.review{
+    text-align: center;
+    padding: 30px 0;
+}
+
+.review h2{
+    font-size: 1.8rem;
+    color:var(--blue);
+}
+
+.inner-card{
+    background-color: var(--lightGray);
+    padding: 70px 20px 40px;
+}
+
+.card{
+    display: none;
+}
+
+.card.active{
+    display:block;
+}
+
+.card img{
+    width: 25%;
+    position: relative;
+    top: 50px;
+}
+
+.name{
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--blue);
+}
+
+.card-text{
+    font-size: 0.85rem;
+}
+
+.control{
+    text-align: center;
+    margin: 25px 0;
+}
+
+.control span{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border: 1.5px solid var(--brightRed);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control span.activeBtn{
+    background-color:var(--brightRed);
+}
+
+.review button{
+    margin:20px 0 15px;
+}
+
+/* Get started section */
+
 .get-started{
     background: url("images/bg-simplify-section-mobile.svg") no-repeat center left;
     background-color: var(--brightRed);
@@ -258,6 +343,100 @@ nav a:hover{
     color: var(--paleRed);
 }
 
+
+/* Footer */
+
+
+footer{
+    width: 100%;
+    height:100%;
+    background-color:var(--darkBlue);
+    padding: 40px 0;
+}
+
+.email-box{
+    display: flex;
+    margin-top: 10px;
+    gap:10px;
+}
+
+.email-box input[type="text"]::placeholder{
+    color: var(--grayishBlue);
+}
+
+.email-box input[type="text"]{
+    padding: 0 20px;
+    border: none;
+    border-radius: 30px;
+    color: var(--brightRed);
+    font-weight: 700;
+    width: 100%;
+}
+
+
+.email-box input[type="submit"]{
+    border: none;
+    background-color: var(--brightRed);
+    color:white;
+    cursor: pointer;
+}
+
+.email-box input[type="submit"]:hover{
+    background-blend-mode: luminosity;
+}
+
+.error{
+    padding: 10px 0 30px;
+}
+
+.middle{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.middle a{
+    display: inline-block;
+    color:white;
+    width: 100%;
+}
+
+.middle a:hover{
+    color: var(--brightRed);
+}
+
+.sm-links{
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sm-links a{
+    color:  white;
+}
+
+.sm-links a svg{
+  transform: scale(1.3);
+}
+
+.sm-links a:hover{
+    color: var(--brightRed);
+}
+
+.bottom{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    margin-top: 50px;
+}
+
+.bottom p{
+    font-size: 14px;
+    color: var(--grayishBlue);
+}
 
 @keyframes pop-in{
     from{

@@ -3,7 +3,9 @@ const close = document.getElementById('close');
 const navMenu = document.getElementById('nav-menu');
 const backDrop = document.querySelector('.backdrop');
 const body = document.querySelector('body');
-const links = document.querySelectorAll('.nav-link')
+const links = document.querySelectorAll('.nav-link');
+const control = document.querySelectorAll('.control span');
+const cards = document.querySelectorAll('.card');
 
 menu.addEventListener('click',() => {
     close.classList.remove('hidden');
@@ -28,5 +30,15 @@ links.forEach(link => {
         backDrop.classList.add('hidden');
         body.style.position = "relative";
         close.classList.add('hidden');
+    });
+});
+
+control.forEach((controlBtn,index) =>{
+    controlBtn.addEventListener('click', () => {
+        control.forEach(controlBtn => {controlBtn.classList.remove('activeBtn');});
+        controlBtn.classList.add('activeBtn');
+
+        cards.forEach(card => card.classList.remove('active'));
+        cards[index].classList.add("active");
     });
 });
