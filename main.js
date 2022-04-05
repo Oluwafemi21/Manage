@@ -4,45 +4,33 @@ const navMenu = document.getElementById('nav-menu');
 const backDrop = document.querySelector('.backdrop');
 const body = document.querySelector('body');
 const links = document.querySelectorAll('.nav-link');
-const control = document.querySelectorAll('.control span');
-const cards = document.querySelectorAll('.card');
 const form = document.querySelector('form');
 const error = document.querySelector('.error');
 
 
 menu.addEventListener('click',() => {
-    close.classList.remove('hidden');
-    navMenu.classList.remove('hidden');
-    backDrop.classList.remove('hidden');
+    close.style.display = "block";
+    navMenu.style.display = "block";
+    backDrop.style.display = "block";
     body.style.position = "fixed";
-    menu.classList.add('hidden');
+    menu.style.display = "none";
 });
 
 close.addEventListener('click',() => {
-    menu.classList.remove('hidden');
-    navMenu.classList.add('hidden');
-    backDrop.classList.add('hidden');
+    menu.style.display = "block";
+    navMenu.style.display = "none";
+    backDrop.style.display = "none";
     body.style.position = "relative";
-    close.classList.add('hidden');
+    close.style.display = "none";
 });
 
 links.forEach(link => {
     link.addEventListener('click', () => {
-        menu.classList.remove('hidden');
-        navMenu.classList.add('hidden');
-        backDrop.classList.add('hidden');
+        menu.style.display = "block";
+        navMenu.style.display = "none";
+        backDrop.style.display = "none";
         body.style.position = "relative";
-        close.classList.add('hidden');
-    });
-});
-
-control.forEach((controlBtn,index) =>{
-    controlBtn.addEventListener('click', () => {
-        control.forEach(controlBtn => {controlBtn.classList.remove('activeBtn');});
-        controlBtn.classList.add('activeBtn');
-
-        cards.forEach(card => card.classList.remove('active'));
-        cards[index].classList.add("active");
+        close.style.display = "none";
     });
 });
 
@@ -52,16 +40,16 @@ const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 form.email.addEventListener('keyup',(e)=>{
     if(pattern.test(e.target.value)){
-        error.classList.add('hidden');
+        error.style.display = "none";
         form.email.style.color = "var(--blue)";
         form.email.style.outline = "none";
         console.log(true);
     } else if (e.target.value === ""){
         form.email.style.outline = "none"
-        error.classList.add('hidden');
+        error.style.display = "none";
     } else {
         form.email.style.outline = "1px solid var(--brightRed)";
-        error.classList.remove('hidden');
+        error.style.display = "block";
         form.email.style.color = "var(--brightRed)";
     }
 })
