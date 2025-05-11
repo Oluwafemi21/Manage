@@ -6,7 +6,7 @@ const body = document.querySelector('body');
 const links = document.querySelectorAll('.nav-link');
 const form = document.querySelector('form');
 const error = document.querySelector('.error');
-
+const year = document.querySelector("#year")
 
 menu.addEventListener('click',() => {
     close.style.display = "block";
@@ -53,3 +53,5 @@ form.email.addEventListener('keyup',(e)=>{
         form.email.style.color = "var(--brightRed)";
     }
 })
+
+year.textContent = new Date().getFullYear();
